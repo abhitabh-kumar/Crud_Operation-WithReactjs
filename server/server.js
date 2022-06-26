@@ -9,13 +9,12 @@ const jwt=require("jsonwebtoken")
 app.use(cors());
 app.use(express.json())
 
-mongoose.connect('mongodb://127.0.0.1:27017/projectAccount2', {
+
+
+mongoose.connect('mongodb+srv://AbhiKumar:Abhi1234@cluster0.bzv6l.mongodb.net/projectAccount2?retryWrites=true&w=majority', {
 	useNewUrlParser: true,
 	useUnifiedTopology: true,
-})
-var db=mongoose.connection; 
-db.on('error',()=>console.log("Error in connection"));
-db.once('open',()=>console.log("connected to database"));
+}).then(()=>console.log("connection successful")).catch((err)=>console.log(err))
 
 app.post('/api/insert',async (req,res)=>{
     const { userName,name,phonenumber,email, password,con_password,collegeName} = req.body
