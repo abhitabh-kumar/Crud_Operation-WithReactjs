@@ -14,7 +14,7 @@ const ViewAll = () => {
       }
       async function findUser(e) {
         e.preventDefault();
-        const response=await fetch("http://54.200.207.130:9999/api/view",{
+        const response=await fetch("http://localhost:9999/api/view",{
         headers:{
           'Content-Type':'application/json',
         },  
