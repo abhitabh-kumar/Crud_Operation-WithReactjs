@@ -22,7 +22,7 @@ const Update = () => {
     }
     async function updateUser(e) {
       e.preventDefault();
-      const response=await fetch("http://localhost:9999/api/update",{
+      const response=await fetch("http://54.200.207.130:9999/api/update",{
       headers:{
         'Content-Type':'application/json',
       },  
