@@ -21,6 +21,7 @@ const Delete = () => {
         const response=await fetch("http://ec2-54-187-83-232.us-west-2.compute.amazonaws.com:9999/api/delete",{
         headers:{
           'Content-Type':'application/json',
+             'Access-Control-Allow-Origin':"*"
         },  
         body: JSON.stringify({
             userName,
